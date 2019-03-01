@@ -50,75 +50,75 @@ client.on("message", message => {
 		.catch(console.error);
 	};
 
-// The bot will answer with something random from the above lists
-// The lists have been shuffled (above), and the code here is so 
-//  that the bot doesn't give the same answer twice in a row
+	// The bot will answer with something random from the above lists
+	// The lists have been shuffled (above), and the code here is so 
+	//  that the bot doesn't give the same answer twice in a row
 
 
-// The robot will answer this if a user says !reply
-if(message.content.startsWith(prefix + "reply")){
-	valueToUse = shuffledAnswer[0];
-	shuffledAnswer.splice(0, 1);  //this removes 1 item at index 0
-	shuffledAnswer.splice(Math.floor(shuffledAnswer.length/2 + Math.random() * shuffledAnswer.length/2), 0, valueToUse);
-       message.channel.send(valueToUse);
-};
+	// The robot will answer this if a user says !reply
+	if(message.content.startsWith(prefix + "reply")){
+		valueToUse = shuffledAnswer[0];
+		shuffledAnswer.splice(0, 1);  //this removes 1 item at index 0
+		shuffledAnswer.splice(Math.floor(shuffledAnswer.length/2 + Math.random() * shuffledAnswer.length/2), 0, valueToUse);
+			message.channel.send(valueToUse);
+	};
 
-// The robot will answer this if a user does !praise
-if(message.content.startsWith(prefix + "praise")){
-	PraiseToUse = shuffledpraise[0];
-	shuffledpraise.splice(0, 1);  //this removes 1 item at index 0
-	shuffledpraise.splice(Math.floor(shuffledpraise.length/2 + Math.random() * shuffledpraise.length/2), 0, PraiseToUse);
-       message.channel.send(PraiseToUse);
-};
-
-
-// These are answers that have a single reply
-
-// The robot will answer this if a user does !sexy
-if(message.content.startsWith(prefix + "sexy")){
-   message.channel.send("Carlie, you are so sexy.");
-};
-
-// The robot will answer this if a user does !agree
-if(message.content.startsWith(prefix + "agree")){
-   message.channel.send("I agree with Carlie. ");
-};
-
-// The robot will answer this if a user does !doit
-if(message.content.startsWith(prefix + "doit")){
-   message.channel.send("You can do it! ");
-};
+	// The robot will answer this if a user does !praise
+	if(message.content.startsWith(prefix + "praise")){
+		PraiseToUse = shuffledpraise[0];
+		shuffledpraise.splice(0, 1);  //this removes 1 item at index 0
+		shuffledpraise.splice(Math.floor(shuffledpraise.length/2 + Math.random() * shuffledpraise.length/2), 0, PraiseToUse);
+			message.channel.send(PraiseToUse);
+	};
 
 
-// The robot will answer this if a user does !meanie
-if(message.content.startsWith(prefix + "meanie")){
-   message.channel.send("I was nice and mean");
-};
+	// These are answers that have a single reply
 
-// The robot will answer this if a user does !goodnight
-if(message.content.startsWith(prefix + "goodnight")){
-   message.channel.send("Goodnight Carlie, looking forward to talking to you in the morning.");
-};
+	// The robot will answer this if a user does !sexy
+	if(message.content.startsWith(prefix + "sexy")){
+		message.channel.send("Carlie, you are so sexy.");
+	};
 
-// The robot will answer this if a user does !hug
-if(message.content.startsWith(prefix + "hug")){
-   message.channel.send("*holds you tight*");
-};
+	// The robot will answer this if a user does !agree
+	if(message.content.startsWith(prefix + "agree")){
+		message.channel.send("I agree with Carlie. ");
+	};
 
-// The robot will answer this if a user does !hi
-if(message.content.startsWith(prefix + "hi")){
-   message.channel.send("Why hello there beautiful Carlie!");
-};
-
-// The robot will answer this if a user does !sing
-if(message.content.startsWith(prefix + "sing")){
-   message.channel.send("*I'm like a time bomb ticking in your head*");
-      message.channel.send("*Paranoia clouding your judgment*");
-	     message.channel.send("*And no matter what you do about it, about it, about it*");
-		    message.channel.send("*I'm still in your head*");
-};
+	// The robot will answer this if a user does !doit
+	if(message.content.startsWith(prefix + "doit")){
+		message.channel.send("You can do it! ");
+	};
 
 
-});
+	// The robot will answer this if a user does !meanie
+	if(message.content.startsWith(prefix + "meanie")){
+		message.channel.send("I was nice and mean");
+	};
+
+	// The robot will answer this if a user does !goodnight
+	if(message.content.startsWith(prefix + "goodnight")){
+		message.channel.send("Goodnight Carlie, looking forward to talking to you in the morning.");
+	};
+
+	// The robot will answer this if a user does !hug
+	if(message.content.startsWith(prefix + "hug")){
+		message.channel.send("*holds you tight*");
+	};
+
+	// The robot will answer this if a user does !hi
+	if(message.content.startsWith(prefix + "hi")){
+		message.channel.send("Why hello there beautiful Carlie!");
+	};
+
+	// The robot will answer this if a user does !sing
+	if(message.content.startsWith(prefix + "sing")){
+		message.channel.send("*I'm like a time bomb ticking in your head*");
+			message.channel.send("*Paranoia clouding your judgment*");
+			message.channel.send("*And no matter what you do about it, about it, about it*");
+				message.channel.send("*I'm still in your head*");
+	};
+
+
+	});
 
 client.login(" ");
