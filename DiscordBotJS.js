@@ -121,4 +121,4 @@ if(message.content.startsWith(prefix + "sing")){
 
 });
 
-client.login("NTI1NzkzODg0NzAyMjQ0ODg0.Dv71FA.R0P4UasVLo6VHTGOOKsR4nxMPVU");
+client.login(" ");
