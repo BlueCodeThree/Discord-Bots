@@ -1,4 +1,5 @@
 # Discord Bots
+This is a personal, fun project to create some discord bots. 
 
 ## Javascript Bot
 I coded the Javascript bot. 
@@ -10,3 +11,4 @@ is shuffled so that it doesn't just use the first response in the list
 but a random response. It then takes that response that has been said, 
 and puts it somewhere in the second half of the list, so that the bot 
 does not say the same response twice in a row. 
+
