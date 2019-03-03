@@ -1,5 +1,8 @@
+Feb 2019
+
 # Discord Bots
-This is a personal, fun project to create some discord bots. 
+This is a per
+sonal, fun project to create some discord bots. 
 
 ## Javascript Bot
 I coded the Javascript bot. 
