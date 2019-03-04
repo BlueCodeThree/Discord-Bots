@@ -40,8 +40,10 @@ things in multiple programming languages.
 
 For instance, if I wanted to find out about Javascript's "if" statements, the bot could respond:
 
-```if (answer === 'dog') { 
+```
+if (answer === 'dog') { 
         // here is the stuff
         } else {
             // more stuff here
-        }```
+        }
+```
