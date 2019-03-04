@@ -37,3 +37,10 @@ March 2019
 
 This is a work in progress bot. The idea is for the bot to be able to show simple references to
 things in multiple programming languages. 
+
+For instance, if I wanted to find out about Javascript's "if" statments, the bot could respond:
+`if (answer === 'dog') { 
+        // here is the stuff
+        } else {
+            // more stuff here
+        }`
