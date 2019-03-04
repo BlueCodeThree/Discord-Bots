@@ -1,9 +1,9 @@
-Feb 2019
-
 # Discord Bots
 This is a personal, fun project to create some discord bots. 
 
 ## Javascript Bot
+
+Feb 2019
 
 *DiscordBotJS.js*
 
@@ -18,6 +18,8 @@ does not say the same response twice in a row.
 
 ## Python Bot
 
+Feb 2019 
+
 *DiscordBotPY.py*
 
 (Not yet in the repository, but making notes here...)
@@ -28,6 +30,8 @@ This bot also has the ability to learn new commands from the user from within Di
 The new user inputs are then saved to a json file, and are able to be accessed by the bot. 
 
 ## Programming Tutor Bot
+
+March 2019
 
 *ProgrammingTutorBot.py*
 
