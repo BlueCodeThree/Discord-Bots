@@ -3,7 +3,7 @@ This is a personal, fun project to create some discord bots.
 
 ## Javascript Bot
 
-Feb 2019
+Jan 2019
 
 *DiscordBotJS.js*
 
@@ -18,7 +18,7 @@ does not say the same response twice in a row.
 
 ## Python Bot
 
-Feb 2019 
+Jan 2019 
 
 *DiscordBotPY.py*
 
