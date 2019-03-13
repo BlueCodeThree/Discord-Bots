@@ -7,13 +7,15 @@ import math
 from random import shuffle
 import json
 import js
+import rb
+import tokenkey
 
 bot = commands.Bot(command_prefix='!')
 prefix = "!"
 learnCommand = "none"
 learnResponse = "none"
 
-TOKEN = ''
+TOKEN = tokenkey.bot_token
 
 client = discord.Client()
 
@@ -23,15 +25,6 @@ async def on_ready():
 #    await client.change_presence(activity=discord.activity(name="being all bot like"))
 
 
-# language plus what they want to learn about. So, if language = js and comment, then it brings
-# up the entry on how to comment in js.
-# a function? 
-# language is a dictionary of lists...  
-
-#def bot_reply(language, question):
-
-language = "js"
-
 @client.event
 async def on_message(message):
     # we do not want the bot to reply to itself
@@ -40,10 +33,12 @@ async def on_message(message):
     if message.content.startswith(prefix + 'hello'):
         msg = 'Hello {0.author.mention}'.format(message)
         await message.channel.send(msg)
-    if message.content.startswith(prefix + language + ' comment'):
+    if message.content.startswith(prefix + 'js' + ' comment'):
         await message.channel.send(js.comment_answer)
-    if message.content.startswith(prefix + language + ' if'):
+    if message.content.startswith(prefix + 'js' + ' if'):
         await message.channel.send(js.if_answer)
+    if message.content.startswith(prefix + 'rb' + ' print'):
+        await message.channel.send(rb.print_answer)
     # if message.content.startswith('!learn'):
     #     global learnCommand
     #     learnCommand = message.content[7:]
