@@ -47,3 +47,5 @@ if (answer === 'dog') {
             // more stuff here
         }
 ```
+
+I also added functionality to get the lyrics to the song you are currently listening (using Spotify) - but I still need  to make it so that each user in the room can do this, not just me.
