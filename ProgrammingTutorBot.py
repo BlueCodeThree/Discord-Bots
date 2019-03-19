@@ -96,6 +96,8 @@ async def on_message(message):
         await message.channel.send(rb.if_answer)
     if message.content.startswith(prefix + "rb" + " array") or message.content.startswith(prefix + 'rb' + ' list'):
         await message.channel.send(rb.array_answer)
+    if message.content.startswith(prefix + "rb" + " loop") or message.content.startswith(prefix + 'rb' + ' while'):
+        await message.channel.send(rb.loop_answer)
 
     # MUSIC! 
     # if message.content.startswith(prefix + 'playing'):

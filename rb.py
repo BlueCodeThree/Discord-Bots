@@ -61,6 +61,12 @@ else conditions
     # output here
 end```
 
+Another way to do if statements:
+`puts "you're young" if age < 30`
+
+If age is bigger than or equal to 30, it'll puts "Old", else puts "Young"
+`puts (age >= 30) ? "Old" : "Young"`
+
 'unless' is confusing and means the opposite of 'if', so it runs if the parameters are false.
 ```unless variable >= 50 # variable is NOT bigger than or equal to 50
     # output here
@@ -87,3 +93,24 @@ Create an array using the %W notation which contains three strings and one is in
 ```item = “milk”
 array = %W(#{item} eggs bread)```
     """
+
+loop_answer = '''
+**Loops for Ruby**
+next goes back to the top of the loop
+unless means "not"
+break ends the loop.
+```loop do 
+    x += 1
+    next unless (x % 2) == 0
+    puts x
+    break if x >= 10
+end
+```
+So in the above example, the loop skips over the number if it is odd, and puts the number if it is not odd, and breaks if x is bigger than or equal to 10.
+
+**While**
+```while y <= 10
+    y += 1
+    puts y
+end```
+    '''
