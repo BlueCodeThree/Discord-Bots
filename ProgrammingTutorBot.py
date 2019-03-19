@@ -58,6 +58,8 @@ def get_lyrics(track_id):
     lyrics = musixmatch.track_lyrics_get(track_id)['message']['body']['lyrics']['lyrics_body']
     return lyrics
 
+  
+
 @client.event
 async def on_message(message):
     # we do not want the bot to reply to itself
@@ -79,13 +81,19 @@ async def on_message(message):
         await message.channel.send(rb.print_answer)
     if message.content.startswith(prefix + "rb" + ' length'):
         await message.channel.send(rb.length_answer)
+    if message.content.startswith(prefix + "rb" + ' time'):
+        await message.channel.send(rb.time_answer)
+    if message.content.startswith(prefix + "rb" + ' gets') or message.content.startswith(prefix + 'rb' + ' input'):
+        await message.channel.send(rb.gets_answer)
 
     # MUSIC! 
-    if message.content.startswith(prefix + 'playing'):
-        await message.channel.send("Artist:  " + current_playing_artist)
-        await message.channel.send("Song: " + current_playing_song)
-        await message.channel.send("Lyrics:")
-        await message.channel.send(get_lyrics(track_id))
+    # if message.content.startswith(prefix + 'playing'):
+    #     await message.channel.send("Artist:  " + current_playing_artist)
+    #     await message.channel.send("Song: " + current_playing_song)
+    #     await message.channel.send("Lyrics:")
+    #     await message.channel.send(get_lyrics(track_id))
+    
+    # learn new commands
     # if message.content.startswith('!learn'):
     #     global learnCommand
     #     learnCommand = message.content[7:]

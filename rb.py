@@ -11,10 +11,21 @@ print_answer = """```
     print("a", "b")
 
     # also can use without brackets
-    print "a", "b"```
+    print "a", "b"
+    
+    # 'p' acts like .inspect```
     """
 
 length_answer = """
-    Getting the length of a variable in ruby: 
+    Getting the length of a string in ruby: 
     ```variableName.length```
     """
+
+time_answer = """
+    ```# gets the time right now
+    time_now = Time.now ```
+    """
+
+gets_answer = """```# asks for user input. The "chomp" removes an enter key at the end of the input
+    gets.chomp
+    ```"""
