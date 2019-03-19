@@ -19,8 +19,6 @@ from musixmatch import Musixmatch
 
 bot = commands.Bot(command_prefix='!')
 prefix = "!"
-learnCommand = "none"
-learnResponse = "none"
 
 TOKEN = tokenkey.bot_token
 
@@ -31,6 +29,7 @@ async def on_ready():
     print("A wild Bot appears")
 #    await client.change_presence(activity=discord.activity(name="being all bot like"))
 
+# STUFF FOR MUSIC STUFF
 username = apikey.spotify_username
 scope = 'user-read-currently-playing'
 musixmatch = Musixmatch(apikey.musixmatch_api)
@@ -48,11 +47,11 @@ except:
 sp = spotipy.Spotify(auth=token)
 
 # Gets the currently playing artist and song name
-current_playing_artist = sp.current_user_playing_track()['item']['album']['artists'][0]['name']
-current_playing_song = sp.current_user_playing_track()['item']['name']
+#current_playing_artist = sp.current_user_playing_track()['item']['album']['artists'][0]['name']
+#current_playing_song = sp.current_user_playing_track()['item']['name']
 
 # search for the track id - in order to get the lyrics
-track_id = musixmatch.track_search(current_playing_song, current_playing_artist, page_size=10, page=1, s_track_rating='desc')['message']['body']['track_list'][0]['track']['track_id']
+#track_id = musixmatch.track_search(current_playing_song, current_playing_artist, page_size=10, page=1, s_track_rating='desc')['message']['body']['track_list'][0]['track']['track_id']
 
 # get the lyrics of a song
 def get_lyrics(track_id):
@@ -64,15 +63,24 @@ async def on_message(message):
     # we do not want the bot to reply to itself
     if message.author == client.user:
         return
+    # general conversation
     if message.content.startswith(prefix + 'hello'):
         msg = 'Hello {0.author.mention}'.format(message)
         await message.channel.send(msg)
-    if message.content.startswith(prefix + 'js' + ' comment'):
+
+    # JAVASCRIPT
+    if message.content.startswith(prefix + "js" + ' comment'):
         await message.channel.send(js.comment_answer)
-    if message.content.startswith(prefix + 'js' + ' if'):
+    if message.content.startswith(prefix + "js" + ' if'):
         await message.channel.send(js.if_answer)
-    if message.content.startswith(prefix + 'rb' + ' print') or message.content.startswith(prefix + 'rb' + ' puts'):
+
+    # RUBY
+    if message.content.startswith(prefix + "rb" + ' print') or message.content.startswith(prefix + 'rb' + ' puts'):
         await message.channel.send(rb.print_answer)
+    if message.content.startswith(prefix + "rb" + ' length'):
+        await message.channel.send(rb.length_answer)
+
+    # MUSIC! 
     if message.content.startswith(prefix + 'playing'):
         await message.channel.send("Artist:  " + current_playing_artist)
         await message.channel.send("Song: " + current_playing_song)

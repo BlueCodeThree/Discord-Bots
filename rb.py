@@ -13,3 +13,8 @@ print_answer = """```
     # also can use without brackets
     print "a", "b"```
     """
+
+length_answer = """
+    Getting the length of a variable in ruby: 
+    ```variableName.length```
+    """
