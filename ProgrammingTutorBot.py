@@ -1,3 +1,5 @@
+# Carlie Hamilton
+# https://github.com/BlueCodeThree
 # I am trying to make a discord bot that helps you with basic programming thingies,
 # in multiple languages, as a simple reference. 
 import discord
@@ -57,8 +59,7 @@ sp = spotipy.Spotify(auth=token)
 def get_lyrics(track_id):
     lyrics = musixmatch.track_lyrics_get(track_id)['message']['body']['lyrics']['lyrics_body']
     return lyrics
-
-  
+ 
 
 @client.event
 async def on_message(message):
@@ -85,6 +86,16 @@ async def on_message(message):
         await message.channel.send(rb.time_answer)
     if message.content.startswith(prefix + "rb" + ' gets') or message.content.startswith(prefix + 'rb' + ' input'):
         await message.channel.send(rb.gets_answer)
+    if message.content.startswith(prefix + "rb" + " function"):
+        await message.channel.send(rb.function_answer)
+    if message.content.startswith(prefix + "rb" + " convert") or message.content.startswith(prefix + 'rb' + ' change type'):
+        await message.channel.send(rb.convert_answer)
+    if message.content.startswith(prefix + "rb" + " string"):
+        await message.channel.send(rb.string_answer)
+    if message.content.startswith(prefix + "rb" + " if") or message.content.startswith(prefix + 'rb' + ' unless'):
+        await message.channel.send(rb.if_answer)
+    if message.content.startswith(prefix + "rb" + " array") or message.content.startswith(prefix + 'rb' + ' list'):
+        await message.channel.send(rb.array_answer)
 
     # MUSIC! 
     # if message.content.startswith(prefix + 'playing'):
