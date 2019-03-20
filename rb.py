@@ -92,10 +92,26 @@ Create an array using the %w notation which contains three strings:
 Create an array using the %W notation which contains three strings and one is interpolated:
 ```item = “milk”
 array = %W(#{item} eggs bread)```
+
+How to cycle through arrays - for loop
+```numbers = [1, 2, 3, 4, 5]
+
+for number in numbers 
+    puts " there are #{number} bottles!"
+end
+```
+
+Cycle through array each 
+```groceries = ["bananas", "apples", "bread", "milk"]
+
+groceries.each do |food|
+    puts "Get some #{food}"
+end
+``` 
     """
 
 loop_answer = '''
-**Loops for Ruby**
+**Loops/Conditionals for Ruby**
 next goes back to the top of the loop
 unless means "not"
 break ends the loop.
@@ -113,4 +129,33 @@ So in the above example, the loop skips over the number if it is odd, and puts t
     y += 1
     puts y
 end```
+
+**Until**
+```until a >= 0
+    a+= 1
+    next unless (a % 2) == 0
+    puts a
+end
+```
+How to cycle through arrays - for loop
+```numbers = [1, 2, 3, 4, 5]
+
+for number in numbers 
+    puts " there are #{number} bottles!"
+end
+```
+
+Cycle through array each 
+```groceries = ["bananas", "apples", "bread", "milk"]
+
+groceries.each do |food|
+    puts "Get some #{food}"
+end
+``` 
+
+cycling through numbers:
+```(1..10).each do |i|
+    puts " number #{i}"
+end
+```
     '''
