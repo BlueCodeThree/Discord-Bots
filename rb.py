@@ -14,12 +14,16 @@ print_answer = """```
     print "a", "b"
     
     # 'p' acts like .inspect```
+
+You can put sums inside the string
+`puts "Here is a string with math #{3 + 5}`
     """
 
 length_answer = """
     Getting the length of a string in ruby: 
     ```variableName.length```
     """
+
 
 time_answer = """
     ```# gets the time right now
@@ -51,6 +55,15 @@ string_answer = """ stuff about strings in ruby
 
 interpolated variable
 `"This is a string with a #{variable}"`
+
+and combining strings
+`full_name = "#{first_name} #{middle_name} #{last_name}"`
+
+```puts "Vowels: " + full_name.count("aeiou").to_s
+puts "Consonants: " + full_name.count("^aeiou").to_s```
+
+```full_name.include?("Justine") # will say either true or false
+full_name.index("Justine").to_s # the number index where this text occurs```
     """
 if_answer = """ if conditionals. Notice no ":" etc
 ```if true
@@ -153,9 +166,32 @@ groceries.each do |food|
 end
 ``` 
 
-cycling through numbers:
+cycling through numbers - a range:
 ```(1..10).each do |i|
-    puts " number #{i}"
+    puts "number #{i}"
 end
 ```
     '''
+
+exceptions_answer = '''```
+begin
+    # code goes here
+rescue
+    # code here what happens if there is an error
+    puts "You can't do that!"
+    exit
+end
+```
+
+another way using "raise"
+```def check_age(age)
+    raise ArgumentError, "Enter Positive Number" unless age > 0
+end
+
+begin
+    check_age(-1)
+rescue ArgumentError
+    puts "That is an impossible age"
+end
+```
+'''

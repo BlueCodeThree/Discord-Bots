@@ -98,6 +98,8 @@ async def on_message(message):
         await message.channel.send(rb.array_answer)
     if message.content.startswith(prefix + "rb" + " loop") or message.content.startswith(prefix + 'rb' + ' while') or message.content.startswith(prefix + 'rb' + ' conditional') or message.content.startswith(prefix + 'rb' + ' until') or message.content.startswith(prefix + 'rb' + ' each') or message.content.startswith(prefix + 'rb' + ' for'):
         await message.channel.send(rb.loop_answer)
+    if message.content.startswith(prefix + "rb" + " exception"):
+        await message.channel.send(rb.exceptions_answer)
 
     # MUSIC! 
     # if message.content.startswith(prefix + 'playing'):
