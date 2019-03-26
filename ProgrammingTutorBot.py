@@ -75,7 +75,7 @@ async def on_message(message):
     if message.content.startswith(prefix + "js" + ' comment'):
         await message.channel.send(js.comment_answer)
     if message.content.startswith(prefix + "js" + ' if'):
-        await message.channel.send(js.if_answer)
+        await message.channel.send(js.if_answer) 
 
     # RUBY
     if message.content.startswith(prefix + "rb" + ' print') or message.content.startswith(prefix + 'rb' + ' puts'):
