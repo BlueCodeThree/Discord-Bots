@@ -27,7 +27,10 @@ length_answer = """
 
 time_answer = """
     ```# gets the time right now
-    time_now = Time.now ```
+time_now = Time.now 
+Time.now.year # for example, returns 2019
+        
+reference: http://ruby-doc.org/core-2.2.0/Time.html```
     """
 
 gets_answer = """```# asks for user input. The "chomp" removes an enter key at the end of the input
@@ -39,7 +42,10 @@ Note that there is no ":" etc.
 ```def functionName(thingies)
     # things for the function go here
 end
-    ```"""
+    ```
+In order to see all the methods for something...
+`9.methods.sort`    
+"""
 
 convert_answer = """ Converting strings, integers and floats etc
 ```variableName.to_s # to string
@@ -84,6 +90,16 @@ If age is bigger than or equal to 30, it'll puts "Old", else puts "Young"
 ```unless variable >= 50 # variable is NOT bigger than or equal to 50
     # output here
 end```
+
+**Case**
+```fruit = "pear"
+case fruit
+when "pear"
+    # do this
+when "apple"
+    # do this
+else 
+    # this ```
     """
 
 array_answer = """
@@ -121,6 +137,11 @@ groceries.each do |food|
     puts "Get some #{food}"
 end
 ``` 
+
+Items can be added to the end of an array by using either push or <<
+```arr = [1, 2, 3, 4]
+arr.push(5) #=> [1, 2, 3, 4, 5]
+arr << 6    #=> [1, 2, 3, 4, 5, 6]```
     """
 
 loop_answer = '''
@@ -169,6 +190,10 @@ end
 cycling through numbers - a range:
 ```(1..10).each do |i|
     puts "number #{i}"
+end
+
+for year in 2000...2015
+    puts year
 end
 ```
     '''

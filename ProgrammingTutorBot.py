@@ -92,7 +92,7 @@ async def on_message(message):
         await message.channel.send(rb.convert_answer)
     if message.content.startswith(prefix + "rb" + " string"):
         await message.channel.send(rb.string_answer)
-    if message.content.startswith(prefix + "rb" + " if") or message.content.startswith(prefix + 'rb' + ' unless'):
+    if message.content.startswith(prefix + "rb" + " if") or message.content.startswith(prefix + 'rb' + ' unless') or message.content.startswith(prefix + 'rb' + ' case'):
         await message.channel.send(rb.if_answer)
     if message.content.startswith(prefix + "rb" + " array") or message.content.startswith(prefix + 'rb' + ' list'):
         await message.channel.send(rb.array_answer)
@@ -100,6 +100,8 @@ async def on_message(message):
         await message.channel.send(rb.loop_answer)
     if message.content.startswith(prefix + "rb" + " exception"):
         await message.channel.send(rb.exceptions_answer)
+
+    # GIT!
 
     # MUSIC! 
     # if message.content.startswith(prefix + 'playing'):
